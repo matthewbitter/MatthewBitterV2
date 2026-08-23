@@ -104,16 +104,3 @@ export default defineEventHandler(async (event) =>
     };
 
 });
-
-
-interface ContactForm
-{
-
-    Name: string
-    Email: string
-    Message: string
-    CreatedAt: FieldValue
-    PhoneNumber?: string
-    token?: string
-
-}
