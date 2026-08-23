@@ -6,7 +6,8 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "@nuxt/scripts",
         "@pinia/nuxt",
-        "@nuxt/icon"
+        "@nuxt/icon",
+        "@nuxtjs/sitemap"
     ],
 
     devtools: {
@@ -14,6 +15,11 @@ export default defineNuxtConfig({
     },
 
     css: ["~/assets/css/main.css"],
+
+    site: {
+        url: "https://matthewbitter.com",
+        name: "MatthewBitter.com"
+    },
 
     colorMode: {
         disableTransition: false
