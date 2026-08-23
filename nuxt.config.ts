@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         "@nuxt/scripts",
         "@pinia/nuxt",
         "@nuxt/icon",
-        "@nuxtjs/sitemap"
+        "@nuxtjs/sitemap",
+        "@nuxtjs/robots"
     ],
 
     devtools: {
