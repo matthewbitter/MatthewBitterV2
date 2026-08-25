@@ -8,7 +8,8 @@ export default defineNuxtConfig({
         "@pinia/nuxt",
         "@nuxt/icon",
         "@nuxtjs/sitemap",
-        "@nuxtjs/robots"
+        "@nuxtjs/robots",
+        "nuxt-auth-utils"
     ],
 
     devtools: {
@@ -34,6 +35,7 @@ export default defineNuxtConfig({
         ResendApiKey: "",
         PersonalEmail: "",
         NoReplyEmail: "",
+        PersonalGoogleId: "",
 
         // Public keys (Server and Client-side)
         public: {
