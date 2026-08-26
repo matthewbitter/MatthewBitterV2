@@ -24,8 +24,8 @@
                     </UFormField>
                     <UCheckbox v-model="UserAgreement" class="w-full">
                         <template #label>
-                            I agree that my submitted data—including my IP address—is collected and processed to respond to my inquiry, as detailed in the 
-                            <NuxtLink to="/PrivacyPolicy">
+                            I agree that my submitted data—including my IP address—is collected and processed to respond to my inquiry, as detailed in the
+                            <NuxtLink to="/PrivacyPolicy" class="text-primary">
                                 Privacy Policy
                             </NuxtLink>
                         </template>
