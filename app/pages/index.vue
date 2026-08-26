@@ -1,8 +1,6 @@
 <template>
     <UPage>
 
-        <Layout-Header />
-
         <Index-Hero />
 
         <Index-AboutMe />
@@ -14,8 +12,6 @@
         <Index-Testimonials />
 
         <Index-Contact />
-
-        <Layout-Footer />
 
     </UPage>
 </template>

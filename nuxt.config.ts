@@ -9,7 +9,8 @@ export default defineNuxtConfig({
         "@nuxt/icon",
         "@nuxtjs/sitemap",
         "@nuxtjs/robots",
-        "nuxt-auth-utils"
+        "nuxt-auth-utils",
+        "@comark/nuxt"
     ],
 
     devtools: {
@@ -44,7 +45,9 @@ export default defineNuxtConfig({
     },
 
     routeRules: {
-        "/": { prerender: true }
+        "/": { prerender: true },
+        "/Admin": { robots: false },
+        "/Login": { robots: false }
     },
 
     compatibilityDate: "2026-06-30",

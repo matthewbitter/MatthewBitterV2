@@ -22,8 +22,16 @@
                     <UFormField name="Message" label="Message">
                         <UTextarea v-model="ContactForm.Message" class="w-full" />
                     </UFormField>
+                    <UCheckbox v-model="UserAgreement" class="w-full">
+                        <template #label>
+                            I agree that my submitted data—including my IP address—is collected and processed to respond to my inquiry, as detailed in the 
+                            <NuxtLink to="/PrivacyPolicy">
+                                Privacy Policy
+                            </NuxtLink>
+                        </template>
+                    </UCheckbox>
                     <div class="flex">
-                        <UButton type="submit" :loading="FormViewState === 'Submitting'" :disabled="FormViewState === 'Submitting'" class="ml-auto">
+                        <UButton type="submit" :color="UserAgreement ? 'primary' : 'neutral'" :loading="FormViewState === 'Submitting'" :disabled="!UserAgreement || FormViewState === 'Submitting'" class="ml-auto">
                             Submit
                         </UButton>
                     </div>
@@ -48,6 +56,7 @@ import z from "zod";
 //---------------------------------------------------------------------------
 // Properties
 //---------------------------------------------------------------------------
+const UserAgreement = ref(false);
 
 const FormSchema = z.object({
     Name: z.string("Name is required").min(1, { message: "Name is required" }),

@@ -15,7 +15,7 @@ export default defineNuxtRouteMiddleware(async () =>
     if (!isValidUser)
     {
 
-        return abortNavigation("Not Authorized???");
+        return abortNavigation("Not Authorized");
 
     }
 
