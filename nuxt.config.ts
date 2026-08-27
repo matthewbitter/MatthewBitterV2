@@ -67,7 +67,7 @@ export default defineNuxtConfig({
             // Scans all your components to bundle icons into the client build
             scan: true,
             // Prevents bundling from breaking if you use many icons
-            sizeLimitKb: 1024
+            sizeLimitKb: 2048
         }
     },
 

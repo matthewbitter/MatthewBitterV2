@@ -1,6 +1,6 @@
 <template>
     <UPageSection id="Testimonials" title="Testimonials">
-        <UCarousel v-slot="{ item }" :items="items" arrows loop dots :ui="{ viewport: 'bg-elevated/50', arrows: 'max-sm:hidden', prev: 'translate-x-8', next: '-translate-x-8' }">
+        <UCarousel v-slot="{ item }" :items="Testimonials" arrows loop dots :ui="{ viewport: 'bg-elevated/50', arrows: 'max-sm:hidden', prev: 'translate-x-8', next: '-translate-x-8' }">
             <UPageCTA :description="item.Testimonial" variant="naked" class="rounded-none [&_p]:my-4" :ui="{ description: 'max-w-xl mx-auto', container: 'sm:py-2 lg:py-2' }">
                 <template #description>
                     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -17,7 +17,7 @@
 //---------------------------------------------------------------------------
 // Properties
 //---------------------------------------------------------------------------
-const items = [
+const Testimonials = [
     {
         Author: "Michael Stanton",
         Title: "Lead Web Developer",
@@ -28,5 +28,33 @@ const items = [
         Title: "Senior UX Developer",
         Testimonial: "<p>\"For over a decade, I've worked closely with Matthew, and he remains one of the most technically gifted developers I've collaborated with. He architected the TypeScript foundation that multiple teams relied on, establishing clear patterns, reducing complexity, and eliminating duplication across large and evolving codebases.</p><p>He consistently promotes best practices, reusable components, and mentors others with clarity and patience. Long before Vue offered official TypeScript support, he was already integrating both into production systems and overcoming significant technical hurdles with calm precision. His forward-thinking approach and ability to push technology ahead of the curve led me to jokingly introduce him to new hires as the inventor of ajax.<br><br>I truly enjoyed working with him and recommend him without hesitation. His mastery of TypeScript, JavaScript, and Vue doesn't just solve problems; it shapes how teams build software and raises the standard of every project he touches.\"</p>"
     }];
+
+
+FischerYatesShuffle(Testimonials);
+
+
+//---------------------------------------------------------------------------
+/**
+ * Randomizes an array efficiently.
+ */
+//---------------------------------------------------------------------------
+function FischerYatesShuffle(array: unknown[])
+{
+
+    // Loop from the last element down to the second element
+    for (let index = array.length - 1; index > 0; index--)
+    {
+
+        // Pick a random index from 0 to index
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+
+        // Swap elements array[index] and array[randomIndex]
+        [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
+
+    }
+
+    return array;
+
+}
 
 </script>
