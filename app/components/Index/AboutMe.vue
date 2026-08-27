@@ -53,7 +53,7 @@
 
                 <UFormField label="Database">
                     <div class="flex flex-wrap gap-2">
-                        <UBadge label="Cloud Firestore" color="neutral" variant="subtle" icon="material-icon-theme:firebase" />
+                        <UBadge label="Cloud Firestore" color="neutral" variant="subtle" icon="thesvg-color:firestore" />
                         <UBadge label="Firebase Realtime Database" color="neutral" variant="subtle" icon="material-icon-theme:firebase" />
                         <UBadge label="MSSQL" color="neutral" variant="subtle" icon="mdi:database" />
                     </div>

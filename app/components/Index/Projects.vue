@@ -14,7 +14,7 @@
                         <UBadge label="Node.js" color="neutral" variant="subtle" icon="material-icon-theme:nodejs" />
                         <UBadge label="Firebase" color="neutral" variant="subtle" icon="material-icon-theme:firebase" />
                         <UBadge label="Pinia" color="neutral" variant="subtle" icon="logos:pinia" />
-                        <UBadge label="Firestore" color="neutral" variant="subtle" icon="material-icon-theme:firebase" />
+                        <UBadge label="Firestore" color="neutral" variant="subtle" icon="thesvg-color:firestore" />
                         <UBadge label="GitHub" color="neutral" variant="subtle" icon="mdi:github" />
                     </div>
                 </template>
