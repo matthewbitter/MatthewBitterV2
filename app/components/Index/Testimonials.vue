@@ -1,6 +1,6 @@
 <template>
     <UPageSection id="Testimonials" title="Testimonials">
-        <UCarousel v-slot="{ item }" :items="items" :autoplay="{ delay: 5_000 }" loop dots :ui="{ viewport: 'bg-elevated/50' }">
+        <UCarousel v-slot="{ item }" :items="items" arrows loop dots :ui="{ viewport: 'bg-elevated/50', arrows: 'max-sm:hidden', prev: 'translate-x-8', next: '-translate-x-8' }">
             <UPageCTA :description="item.Testimonial" variant="naked" class="rounded-none [&_p]:my-4" :ui="{ description: 'max-w-xl mx-auto', container: 'sm:py-2 lg:py-2' }">
                 <template #description>
                     <!-- eslint-disable-next-line vue/no-v-html -->
