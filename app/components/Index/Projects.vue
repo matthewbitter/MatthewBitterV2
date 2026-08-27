@@ -6,6 +6,9 @@
                     <NuxtImg src="/Images/MatthewBitter.png" width="540" height="400" alt="Ignite" fit="fill" />
                 </template>
                 <template #default>
+                    <span v-if="TotalCommits" class="text-primary">
+                        {{ TotalCommits.toLocaleString() }} total commits on GitHub
+                    </span>
                     <div class="flex flex-wrap gap-2 items-end">
                         <UBadge label="Vue" color="neutral" variant="subtle" icon="material-icon-theme:vue" />
                         <UBadge label="Nuxt" color="neutral" variant="subtle" icon="material-icon-theme:nuxt" />
@@ -63,3 +66,20 @@
         </UPageGrid>
     </UPageSection>
 </template>
+
+<script setup lang="ts">
+
+const response = await $fetch.raw("https://api.github.com/repos/matthewbitter/MatthewBitterV2/commits?per_page=1");
+const linkHeader = response.headers.get("link");
+let TotalCommits = 0;
+
+if (linkHeader)
+{
+
+    // Extract the page number associated with rel="last"
+    const match = linkHeader.match(/<[^>]*[?&]page=(\d+)[^>]*>;\s*rel="last"/);
+    TotalCommits = match ? parseInt(match[1] as string, 10) : 1;
+
+}
+
+</script>
