@@ -27,7 +27,7 @@ useHead({
 });
 
 const title = "Matthew Bitter";
-const description = "Senior Full-Stack Web Developer and Unity Game Developer based in Cincinnati, Ohio.";
+const description = "Senior Full-Stack Developer and Unity Game Developer based in Cincinnati, Ohio.";
 
 useSeoMeta({
     title,

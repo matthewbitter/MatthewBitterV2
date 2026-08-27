@@ -9,7 +9,7 @@
             <template #description>
 
                 <p>
-                    I am a Senior Full-Stack Web Developer with over 20+ years of experience, specializing in building high-performance, scalable, responsive applications using <span class="text-primary font-medium">Vue</span>,
+                    I am a Senior Full-Stack Developer with over 20+ years of experience, specializing in building high-performance, scalable, responsive applications using <span class="text-primary font-medium">Vue</span>,
                     <span class="text-primary font-medium">Nuxt</span>, and <span class="text-primary font-medium">TypeScript</span>. My core expertise lies in crafting seamless user interfaces integrated with robust cloud infrastructure.
                     From front-end state management to back-end Cloud Functions, I bridge the gap between pixel-perfect design and serverless
                     scalability.

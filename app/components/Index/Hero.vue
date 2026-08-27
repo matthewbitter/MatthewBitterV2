@@ -1,5 +1,5 @@
 <template>
-    <UPageHero id="Home" title="Matthew Bitter" description="Senior Full-Stack Web Developer and Unity Game Developer based in Cincinnati, Ohio." headline="Open To Work" :links="HeroLinks" class="min-h-screen flex flex-col justify-center">
+    <UPageHero id="Home" title="Matthew Bitter" description="Senior Full-Stack Developer and Unity Game Developer based in Cincinnati, Ohio." headline="Open To Work" :links="HeroLinks" class="min-h-screen flex flex-col justify-center">
         <template #headline>
             <UButton label="Open To Work" variant="ghost">
                 <template #leading>
