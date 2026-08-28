@@ -67,7 +67,12 @@ export default defineNuxtConfig({
             // Scans all your components to bundle icons into the client build
             scan: true,
             // Prevents bundling from breaking if you use many icons
-            sizeLimitKb: 2048
+            sizeLimitKb: 4096,
+            icons: [
+                "thesvg-color:firestore",
+                "thesvg-color:resend-dark",
+                "thesvg-color:resend-light"
+            ]
         }
     },
 
