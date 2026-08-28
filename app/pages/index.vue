@@ -5,7 +5,9 @@
 
         <Index-AboutMe />
 
-        <Index-Projects />
+        <Index-Websites />
+
+        <Index-Games />
 
         <Index-Skills />
 

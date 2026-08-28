@@ -41,10 +41,16 @@ const NavigationLinks = computed<NavigationMenuItem[]>(() => [
         active: isIndex.value && ActiveSection.value === "AboutMe"
     },
     {
-        label: "Projects",
-        to: "/#Projects",
-        icon: "mdi:folders",
-        active: isIndex.value && ActiveSection.value === "Projects"
+        label: "Websites",
+        to: "/#Websites",
+        icon: "mdi:web",
+        active: isIndex.value && ActiveSection.value === "Websites"
+    },
+    {
+        label: "Games",
+        to: "/#Games",
+        icon: "lucide:gamepad",
+        active: isIndex.value && ActiveSection.value === "Games"
     },
     {
         label: "Skills",
@@ -130,9 +136,17 @@ function SetupSectionObserver()
             if (entry.isIntersecting)
             {
 
-                ActiveSection.value = entry.target.id;
+                const id = entry.target.id;
+
+                ActiveSection.value = id;
+
                 entry.target.classList.remove("opacity-0", "translate-y-10");
                 entry.target.classList.add("opacity-100", "translate-y-0");
+
+                const newHash = `#${id}`;
+
+                history.replaceState(null, "", newHash);
+                route.hash = newHash;
 
             }
 

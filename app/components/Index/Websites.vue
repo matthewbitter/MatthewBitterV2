@@ -1,5 +1,5 @@
 <template>
-    <UPageSection id="Projects" title="Projects">
+    <UPageSection id="Websites" title="Web Projects">
         <UPageGrid class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
             <UPageCard title="MatthewBitter.com" description="My personal portfolio website to let you know more about me, a number of my projects, and my core skills. " :ui="{ header: 'w-full' }">
                 <template #header>
