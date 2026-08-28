@@ -156,7 +156,7 @@ function SetupSectionObserver()
         threshold: 0
     });
 
-    const sections = document.querySelectorAll("div[id], section[id]");
+    const sections = document.querySelectorAll("[data-slot='root'][id]");
 
     for (const section of sections)
     {
