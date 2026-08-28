@@ -3,17 +3,29 @@
 
         <Index-Hero />
 
-        <Index-AboutMe />
+        <Shared-Animation-FadeIn>
+            <Index-AboutMe />
+        </Shared-Animation-FadeIn>
 
-        <Index-Websites />
+        <Shared-Animation-FadeIn>
+            <Index-Websites />
+        </Shared-Animation-FadeIn>
 
-        <Index-Games />
+        <Shared-Animation-FadeIn>
+            <Index-Games />
+        </Shared-Animation-FadeIn>
 
-        <Index-Skills />
+        <Shared-Animation-FadeIn>
+            <Index-Skills />
+        </Shared-Animation-FadeIn>
 
-        <Index-Testimonials />
+        <Shared-Animation-FadeIn>
+            <Index-Testimonials />
+        </Shared-Animation-FadeIn>
 
-        <Index-Contact />
+        <Shared-Animation-FadeIn>
+            <Index-Contact />
+        </Shared-Animation-FadeIn>
 
     </UPage>
 </template>
