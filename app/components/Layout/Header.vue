@@ -143,7 +143,6 @@ function SetupSectionObserver()
                 const newHash = `#${id}`;
 
                 history.replaceState(null, "", newHash);
-                route.hash = newHash;
 
             }
 
