@@ -1,6 +1,11 @@
 <template>
     <UApp>
         <UMain>
+
+            <!-- Automatically handles dynamic in-app and route notifications -->
+            <NuxtAnnouncer />
+            <NuxtRouteAnnouncer />
+
             <Layout-Header />
             <NuxtPage />
             <Layout-Footer />
