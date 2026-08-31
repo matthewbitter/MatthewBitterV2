@@ -37,17 +37,21 @@ export default defineNuxtConfig({
         PersonalEmail: "",
         NoReplyEmail: "",
         PersonalGoogleId: "",
+        StripeSecretKey: "",
+        StripeWebhookSecret: "",
 
         // Public keys (Server and Client-side)
         public: {
-            RecaptchaSiteKey: "6Lep3IwtAAAAAMCXbo_3rXt3XVHC4zbs83_LHWHQ"
+            RecaptchaSiteKey: "",
+            StripePublishableKey: ""
         }
     },
 
     routeRules: {
         "/": { prerender: true },
         "/Admin": { robots: false },
-        "/Login": { robots: false }
+        "/Login": { robots: false },
+        "/StripeTest": { robots: false }
     },
 
     compatibilityDate: "2026-06-30",
