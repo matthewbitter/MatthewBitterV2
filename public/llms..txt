@@ -1,0 +1,18 @@
+# Matthew Bitter - Senior Full-Stack Developer and Unity Game Developer
+
+> Matthew Bitter is a Senior Full-Stack Developer and Unity Game Developer based in Cincinnati, Ohio, USA specializing in TypeScript, Vue, and Nuxt.
+
+## Summary
+* **Current Role:** Senior Full-Stack Developer
+* **Core Skills:** TypeScript, Vue, Next
+* **Location:** Cincinnati, Ohio
+
+## Featured Projects
+* [Matthew Bitter](https://matthewbitter.com): My personal portfolio website to let you know more about me, a number of my projects, and my core skills.
+* Ignite: Ignite empowers individual achievement by recognition programs, incentives, and social driven recognition activities and rewarding your employees.
+
+## Connect
+* [Email](mailto:contact@matthewbitter.com)
+* [GitHub](https://github.com/matthewbitter)
+* [LinkedIn](https://www.linkedin.com/in/matthewbitterdeveloper)
+* [Resume/CV](https://matthewbitter.com/Resume.pdf)
