@@ -77,7 +77,7 @@ const ContactForm = reactive<Partial<Schema>>({
 const ContactFormRef = ref<Form<typeof ContactForm>>();
 const FormViewState = ref<"Loading" | "Loaded" | "Submitting" | "Submitted" | "ErrorLoading" | "ErrorSubmitting">("Loaded");
 
-const { onLoaded, onError, proxy } = useScriptGoogleRecaptcha();
+const { onLoaded, onError, load, proxy } = useScriptGoogleRecaptcha();
 
 
 //---------------------------------------------------------------------------
@@ -141,6 +141,7 @@ async function SubmitContactForm(event: FormSubmitEvent<Schema>): Promise<void>
 async function GetRecaptchaToken(action: string): Promise<string | undefined>
 {
 
+    await load();
     await WaitUntilRecaptchaReady();
 
     const siteKey = useRuntimeConfig().public.RecaptchaSiteKey;

@@ -94,7 +94,7 @@ export default defineNuxtConfig({
             googleRecaptcha: {
                 siteKey: "6Lep3IwtAAAAAMCXbo_3rXt3XVHC4zbs83_LHWHQ",
                 // Optional: triggers script load when Nuxt is ready
-                trigger: "onNuxtReady"
+                trigger: "manual"
             }
         }
     }
