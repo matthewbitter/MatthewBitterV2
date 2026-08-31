@@ -51,7 +51,16 @@ export default defineNuxtConfig({
         "/": { prerender: true },
         "/Admin": { robots: false },
         "/Login": { robots: false },
-        "/StripeTest": { robots: false }
+        "/StripeTest": { robots: false },
+        // Cache Assets for One Year
+        "/_nuxt/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+        // Cache Images for 30 Days
+        "/Images/**": { headers: { "Cache-Control": "public, max-age=2592000, must-revalidate" } }
+    },
+
+    features: {
+        // Inline extracted styles into HTML to prevent render-blocking requests
+        inlineStyles: true
     },
 
     compatibilityDate: "2026-06-30",
