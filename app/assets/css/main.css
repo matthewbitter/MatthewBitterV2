@@ -17,6 +17,15 @@
   --color-green-950: #052E16;
 }
 
+/* Update Primary Color Contrast */
+:root {
+  --ui-primary: var(--ui-color-primary-600);
+}
+
+.dark {
+  --ui-primary: var(--ui-color-primary-400);
+}
+
 html {
   scroll-behavior: smooth;
 }
