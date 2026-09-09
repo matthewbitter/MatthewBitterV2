@@ -2,9 +2,7 @@
     <UPageCard title="Pinia" icon="logos:pinia" description="The official state management library for Vue.js" :ui="{ footer: 'flex' }">
         <template #footer>
             <UModal v-model:open="PiniaModalOpened" title="Pinia State Management Example" :ui="{ footer: 'justify-end' }">
-                <div @click.stop>
-                    <UButton label="View Example" variant="ghost" @click="PiniaApiModuleInformation.IncrementViewCount" />
-                </div>
+                <UButton label="View Example" variant="ghost" @click="PiniaApiModuleInformation.IncrementViewCount" />
                 <template #body>
 
                     <UPageList>
