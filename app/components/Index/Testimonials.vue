@@ -1,6 +1,6 @@
 <template>
     <UPageSection id="Testimonials" title="Testimonials">
-        <UCarousel v-slot="{ item }" :items="Testimonials" arrows loop dots :ui="{ viewport: 'bg-elevated/50', arrows: 'max-sm:hidden', prev: 'translate-x-8', next: '-translate-x-8' }">
+        <UCarousel v-slot="{ item }" :items="RandomizedTestimonials" arrows loop dots :ui="{ viewport: 'bg-elevated/50', arrows: 'max-sm:hidden', prev: 'translate-x-8', next: '-translate-x-8' }">
             <UPageCTA :description="item.Testimonial" variant="naked" class="rounded-none [&_p]:my-4" :ui="{ description: 'max-w-xl mx-auto', container: 'sm:py-2 lg:py-2' }">
                 <template #description>
                     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -17,7 +17,9 @@
 //---------------------------------------------------------------------------
 // Properties
 //---------------------------------------------------------------------------
-const Testimonials = [
+type Testimonial = { Author: string, Title: string, Testimonial: string };
+
+const Testimonials: Testimonial[] = [
     {
         Author: "Michael Stanton",
         Title: "Lead Web Developer",
@@ -30,7 +32,7 @@ const Testimonials = [
     }];
 
 
-FischerYatesShuffle(Testimonials);
+const RandomizedTestimonials = useState<Testimonial[]>("RandomizedTestimonials", () => FischerYatesShuffle<Testimonial>(Testimonials));
 
 
 //---------------------------------------------------------------------------
@@ -38,22 +40,27 @@ FischerYatesShuffle(Testimonials);
  * Randomizes an array efficiently.
  */
 //---------------------------------------------------------------------------
-function FischerYatesShuffle(array: unknown[])
+function FischerYatesShuffle<Type>(array: Type[]): Type[]
 {
 
+    const cleanArray: Type[] = array.filter((item): item is Type => item !== undefined);
+
     // Loop from the last element down to the second element
-    for (let index = array.length - 1; index > 0; index--)
+    for (let index = cleanArray.length - 1; index > 0; index--)
     {
 
         // Pick a random index from 0 to index
         const randomIndex = Math.floor(Math.random() * (index + 1));
 
+        const item = cleanArray[index]!;
+
         // Swap elements array[index] and array[randomIndex]
-        [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
+        cleanArray[index] = cleanArray[randomIndex]!;
+        cleanArray[randomIndex] = item;
 
     }
 
-    return array;
+    return cleanArray;
 
 }
 
