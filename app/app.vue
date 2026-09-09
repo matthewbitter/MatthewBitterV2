@@ -35,8 +35,8 @@ useHead({
     }
 });
 
-const title = "Matthew Bitter | Senior Full-Stack Developer Portfolio";
-const description = "Matthew Bitter is a Senior Full-Stack Developer with over 20+ years of experience, specializing in building applications using Vue, Nuxt, and TypeScript.";
+const title = "Matthew Bitter – Developer Portfolio";
+const description = "A Senior Full-Stack Developer with over 20+ years of experience who specializes in Vue, Nuxt, and TypeScript.";
 
 useSeoMeta({
     title,
