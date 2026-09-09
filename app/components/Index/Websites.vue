@@ -6,8 +6,10 @@
                     <NuxtImg src="/Images/MatthewBitter.png" width="348" height="257" alt="Matthew Bitter" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" />
                 </template>
                 <template #default>
-                    <span v-if="TotalCommits" class="text-primary">
-                        {{ TotalCommits.toLocaleString() }} total commits on GitHub
+                    <span ref="target" class="text-primary">
+                        <template v-if="TotalCommits">
+                            {{ TotalCommits.toLocaleString() }} total commits on GitHub
+                        </template>
                     </span>
                     <div class="flex flex-wrap gap-2 items-end">
                         <UBadge label="Vue" color="neutral" variant="subtle" icon="material-icon-theme:vue" />
@@ -69,16 +71,83 @@
 
 <script setup lang="ts">
 
-const response = await $fetch.raw("https://api.github.com/repos/matthewbitter/MatthewBitterV2/commits?per_page=1");
-const linkHeader = response.headers.get("link");
-let TotalCommits = 0;
+//---------------------------------------------------------------------------
+// Properties
+//---------------------------------------------------------------------------
+const TotalCommits = ref(0);
+const target = ref<HTMLElement | null>(null);
+let observer: IntersectionObserver | null = null;
 
-if (linkHeader)
+
+//---------------------------------------------------------------------------
+/**
+ * Runs after component renders in the DOM
+ */
+//---------------------------------------------------------------------------
+onMounted(() =>
 {
 
-    // Extract the page number associated with rel="last"
-    const match = linkHeader.match(/<[^>]*[?&]page=(\d+)[^>]*>;\s*rel="last"/);
-    TotalCommits = match ? parseInt(match[1] as string, 10) : 1;
+    observer = new IntersectionObserver(([entry]) =>
+    {
+
+        if (entry?.isIntersecting)
+        {
+
+            LoadCommitTotal();
+
+            if (target.value)
+            {
+
+                observer?.unobserve(target.value);
+
+            }
+
+        }
+
+    }, { threshold: 0.1 });
+
+    if (target.value)
+    {
+
+        observer.observe(target.value);
+
+    }
+
+});
+
+
+//---------------------------------------------------------------------------
+/**
+ * Runs after component is removed from the DOM
+ */
+//---------------------------------------------------------------------------
+onUnmounted(() =>
+{
+
+    observer?.disconnect();
+
+});
+
+
+//---------------------------------------------------------------------------
+/**
+ * Loads the total number of commits for the project.
+ */
+//---------------------------------------------------------------------------
+async function LoadCommitTotal(): Promise<void>
+{
+
+    const response = await $fetch.raw("https://api.github.com/repos/matthewbitter/MatthewBitterV2/commits?per_page=1", { method: "HEAD" });
+    const linkHeader = response.headers.get("link");
+
+    if (linkHeader)
+    {
+
+        // Extract the page number associated with rel="last"
+        const match = linkHeader.match(/<[^>]*[?&]page=(\d+)[^>]*>;\s*rel="last"/);
+        TotalCommits.value = match ? parseInt(match[1] as string, 10) : 1;
+
+    }
 
 }
 
