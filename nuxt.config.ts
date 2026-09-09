@@ -54,8 +54,9 @@ export default defineNuxtConfig({
         "/StripeTest": { robots: false },
         // Cache Assets for One Year
         "/_nuxt/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
-        // Cache Images for 30 Days
-        "/Images/**": { headers: { "Cache-Control": "public, max-age=2592000, must-revalidate" } }
+        // Cache Images for One Year
+        "/_ipx/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+        "/Images/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } }
     },
 
     features: {
