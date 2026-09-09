@@ -87,7 +87,8 @@ export default defineNuxtConfig({
                 "thesvg-color:resend-dark",
                 "thesvg-color:resend-light"
             ]
-        }
+        },
+        serverBundle: "remote" // Downloads required icons on demand via CDN
     },
 
     scripts: {
