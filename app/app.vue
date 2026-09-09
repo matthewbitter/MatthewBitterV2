@@ -28,7 +28,8 @@ useHead({
     ],
     link: [
         { rel: "icon", href: "/favicon.ico" },
-        { rel: "canonical", href: url }
+        { rel: "canonical", href: url },
+        { rel: "preconnect", href: url }
     ],
     htmlAttrs: {
         lang: "en"
