@@ -3,7 +3,7 @@
         <UPageCard :ui="{ header: 'flex justify-center w-full', description: 'space-y-4 flex-1 min-w-0' }">
 
             <template #header>
-                <NuxtImg src="/Images/MyPhoto.png" width="281" height="281" alt="Matthew Bitter" class="rounded-full aspect-square object-cover" format="avif" quality="50" />
+                <NuxtImg src="/Images/MyPhoto.png" width="281" height="281" alt="Matthew Bitter" class="rounded-full aspect-square object-cover" format="avif" quality="50" loading="lazy" />
             </template>
 
             <template #description>

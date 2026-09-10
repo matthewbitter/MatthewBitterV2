@@ -3,7 +3,7 @@
         <UPageGrid>
             <UPageCard title="MatthewBitter.com" description="My personal portfolio website to let you know more about me, a number of my projects, and my core skills. " :ui="{ header: 'w-full' }">
                 <template #header>
-                    <NuxtImg src="/Images/MatthewBitter.png" width="348" height="257" alt="Matthew Bitter" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" />
+                    <NuxtImg src="/Images/MatthewBitter.png" width="348" height="257" alt="Matthew Bitter" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" loading="lazy" />
                 </template>
                 <template #default>
                     <span ref="target" class="text-primary">
@@ -26,7 +26,7 @@
             </UPageCard>
             <UPageCard title="Ignite" description="Ignite empowers individual achievement by recognition programs, incentives, and social driven recognition activities and rewarding your employees." :ui="{ header: 'w-full' }">
                 <template #header>
-                    <NuxtImg src="/Images/Ignite.png" width="348" height="257" alt="Ignite" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" />
+                    <NuxtImg src="/Images/Ignite.png" width="348" height="257" alt="Ignite" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" loading="lazy" />
                 </template>
                 <template #default>
                     <div class="flex flex-wrap gap-2 items-end">
@@ -44,7 +44,7 @@
             </UPageCard>
             <UPageCard title="Moonstruck Games" description="Moonstruck Games is a Cincinnati based gaming company that is focused on mobile and social gaming.">
                 <template #header>
-                    <NuxtImg src="/Images/Moonstruck.png" width="348" height="257" alt="Moonstruck" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" />
+                    <NuxtImg src="/Images/Moonstruck.png" width="348" height="257" alt="Moonstruck" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" loading="lazy" />
                 </template>
                 <template #default>
                     <div class="flex flex-wrap gap-2 items-end">
@@ -56,7 +56,7 @@
             </UPageCard>
             <UPageCard title="SocialPoint" description="SocialPoint is a social media management tool for the regular social user that enhances their social media engagement on a daily basis.">
                 <template #header>
-                    <NuxtImg src="/Images/SocialPoint.jpg" width="348" height="257" alt="Social Point" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" />
+                    <NuxtImg src="/Images/SocialPoint.jpg" width="348" height="257" alt="Social Point" fit="fill" format="avif" quality="50" sizes="xs:100vw sm:100vw md:50vw lg:348px" loading="lazy" />
                 </template>
                 <template #default>
                     <div class="flex flex-wrap gap-2 items-end">
