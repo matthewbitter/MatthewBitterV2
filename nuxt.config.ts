@@ -49,7 +49,7 @@ export default defineNuxtConfig({
 
     routeRules: {
         "/": { prerender: true },
-        "/Admin": { robots: false },
+        "/Admin/**": { robots: false },
         "/Login": { robots: false },
         "/StripeTest": { robots: false },
         // Cache Assets for One Year

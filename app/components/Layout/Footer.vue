@@ -13,7 +13,7 @@
                 </UButton>
             </UTooltip>
             <UTooltip text="LinkedIn">
-                <UButton icon="i-simple-icons-linkedin" to="https://www.linkedin.com/in/matthewbitterdeveloper" target="_blank" color="neutral" variant="ghost" aria-label="LinkedIn">
+                <UButton icon="i-simple-icons-linkedin" to="https://www.linkedin.com/in/matthew-bitter" target="_blank" color="neutral" variant="ghost" aria-label="LinkedIn">
                     <span class="sr-only">LinkedIn</span>
                 </UButton>
             </UTooltip>
