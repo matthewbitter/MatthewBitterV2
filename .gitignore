@@ -24,3 +24,8 @@ logs
 !.env.example
 
 matthewbitterv2-firebase-adminsdk-fbsvc-9a96501a7a.json
+
+# Vitest reports and artifacts
+.vitest/
+# Test coverage
+coverage/

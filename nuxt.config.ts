@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         "@nuxtjs/sitemap",
         "@nuxtjs/robots",
         "nuxt-auth-utils",
-        "@comark/nuxt"
+        "@comark/nuxt",
+        "@nuxt/test-utils"
     ],
 
     devtools: {
