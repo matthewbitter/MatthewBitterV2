@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         "@nuxtjs/robots",
         "nuxt-auth-utils",
         "@comark/nuxt",
-        "@nuxt/test-utils"
+        "@nuxt/test-utils/module"
     ],
 
     devtools: {
