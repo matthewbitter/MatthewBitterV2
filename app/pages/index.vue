@@ -4,27 +4,27 @@
         <Index-Hero />
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-AboutMe />
+            <Index-AboutMe />
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-Websites />
+            <Index-Websites />
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-Games />
+            <Index-Games />
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-Skills />
+            <Index-Skills />
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-Testimonials />
+            <Index-Testimonials />
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
-            <LazyIndex-Contact />
+            <Index-Contact />
         </Shared-Animation-FadeIn>
 
     </UPage>
