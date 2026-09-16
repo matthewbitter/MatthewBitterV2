@@ -101,12 +101,12 @@ onError(() =>
 async function SubmitContactForm(event: FormSubmitEvent<Schema>): Promise<void>
 {
 
+    FormViewState.value = "Submitting";
+
     const token = await GetRecaptchaToken("ContactForm");
 
     try
     {
-
-        FormViewState.value = "Submitting";
 
         const data = await $fetch("/api/ContactForm", { method: "POST", body: { ...ContactForm, token } });
 
