@@ -1,7 +1,7 @@
 <template>
     <UPageSection id="Contact" title="Contact">
         <UPageGrid class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-            <UPageCard title="I'd like to hear from you!" description="If you have any inquiries or just want to say hi, please use the contact form.">
+            <UPageCard title="🎯 Ready to Build Something Exceptional?" description="Let's discuss how over two decades of engineering experience can accelerate your business goals. If you have any inquiries or just want to say hi, please use the contact form. I'd love to hear from you!">
                 <template #default>
                     <UIcon name="mdi:contact-mail" class="text-primary w-full size-32" />
                 </template>

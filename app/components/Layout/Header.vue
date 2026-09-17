@@ -1,8 +1,8 @@
 <template>
     <UHeader title="Matthew Bitter" to="/#Home" mode="slideover">
-        <UNavigationMenu :items="NavigationLinks" />
+        <UNavigationMenu :items="NavigationLinks" content-orientation="vertical" class="hidden lg:flex shrink-0" />
         <template #body>
-            <UNavigationMenu :items="NavigationLinks" orientation="vertical" />
+            <UNavigationMenu :items="NavigationLinks" orientation="vertical" :collapsible="false" />
         </template>
         <template #right>
             <UColorModeButton />
@@ -41,16 +41,24 @@ const NavigationLinks = computed<NavigationMenuItem[]>(() => [
         active: isIndex.value && ActiveSection.value === "AboutMe"
     },
     {
-        label: "Websites",
-        to: "/#Websites",
-        icon: "mdi:web",
-        active: isIndex.value && ActiveSection.value === "Websites"
-    },
-    {
-        label: "Games",
-        to: "/#Games",
-        icon: "lucide:gamepad",
-        active: isIndex.value && ActiveSection.value === "Games"
+        label: "Projects",
+        icon: "mdi:briefcase",
+        active: isIndex.value && (ActiveSection.value === "Websites" || ActiveSection.value === "Games"),
+        defaultOpen: true,
+        children: [
+            {
+                label: "Websites",
+                to: "/#Websites",
+                icon: "mdi:web",
+                active: isIndex.value && ActiveSection.value === "Websites"
+            },
+            {
+                label: "Games",
+                to: "/#Games",
+                icon: "lucide:gamepad",
+                active: isIndex.value && ActiveSection.value === "Games"
+            }
+        ]
     },
     {
         label: "Skills",
@@ -66,12 +74,26 @@ const NavigationLinks = computed<NavigationMenuItem[]>(() => [
     },
     {
         label: "Contact",
-        to: "/#Contact",
         icon: "mdi:contact",
-        active: isIndex.value && ActiveSection.value === "Contact"
+        active: isIndex.value && (ActiveSection.value === "HireMe" || ActiveSection.value === "Contact"),
+        defaultOpen: true,
+        children: [
+            {
+                label: "Hire Me",
+                to: "/#HireMe",
+                icon: "mdi:megaphone",
+                active: isIndex.value && ActiveSection.value === "HireMe"
+            },
+            {
+                label: "Contact Form",
+                to: "/#Contact",
+                icon: "mdi:form",
+                active: isIndex.value && ActiveSection.value === "Contact"
+            }
+        ]
     }
 ]);
-
+// HireMe
 
 //---------------------------------------------------------------------------
 /**

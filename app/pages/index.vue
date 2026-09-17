@@ -24,6 +24,10 @@
         </Shared-Animation-FadeIn>
 
         <Shared-Animation-FadeIn>
+            <Index-HireMe />
+        </Shared-Animation-FadeIn>
+
+        <Shared-Animation-FadeIn>
             <Index-Contact />
         </Shared-Animation-FadeIn>
 
