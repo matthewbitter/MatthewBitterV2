@@ -45,7 +45,7 @@ const HeroLinks = ref<ButtonProps[]>([{
 },
 {
     label: "Resume",
-    to: "/MatthewBitterResume.pdf",
+    to: "/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf",
     icon: "i-simple-icons-googledocs",
     ...linkSettings
 }
