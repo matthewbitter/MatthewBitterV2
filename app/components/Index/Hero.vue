@@ -8,6 +8,15 @@
                 </template>
             </UButton>
         </template>
+        <template #links>
+            <div class="flex flex-wrap gap-x-6 gap-y-3 justify-center">
+                <UButton label="GitHub" to="https://github.com/matthewbitter" variant="ghost" size="xl" icon="i-simple-icons-github" target="_blank" rel="noopener noreferrer" class="mx-auto" />
+                <UButton label="LinkedIn" to="https://www.linkedin.com/in/matthew-bitter" variant="ghost" size="xl" icon="i-simple-icons-linkedin" target="_blank" rel="noopener noreferrer" class="mx-auto" />
+                <UDropdownMenu arrow :items="ResumeLinks" size="xl">
+                    <UButton label="Resume" to="/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf" variant="ghost" size="xl" icon="i-simple-icons-googledocs" target="_blank" rel="noopener noreferrer" class="mx-auto" />
+                </UDropdownMenu>
+            </div>
+        </template>
         <template #bottom>
             <UButton label="More" to="#AboutMe" variant="ghost" size="xl" trailing-icon="mdi:arrow-down" class="mx-auto" />
         </template>
@@ -19,33 +28,28 @@
 //---------------------------------------------------------------------------
 // Imports
 //---------------------------------------------------------------------------
-import type { ButtonProps } from "@nuxt/ui";
+import type { DropdownMenuItem } from "@nuxt/ui";
 
 
 //---------------------------------------------------------------------------
 // Properties
 //---------------------------------------------------------------------------
 
-const linkSettings: ButtonProps = {
+const linkSettings: DropdownMenuItem = {
     target: "_blank",
-    rel: "noopener noreferrer"
+    rel: "noopener noreferrer",
+    color: "primary"
 };
 
-const HeroLinks = ref<ButtonProps[]>([{
-    label: "GitHub",
-    to: "https://github.com/matthewbitter",
-    icon: "i-simple-icons-github",
-    ...linkSettings
-},
-{
-    label: "LinkedIn",
-    to: "https://www.linkedin.com/in/matthew-bitter",
-    icon: "i-simple-icons-linkedin",
-    ...linkSettings
-},
-{
-    label: "Resume",
+const ResumeLinks = ref<DropdownMenuItem[]>([{
+    label: "Portfolio",
     to: "/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf",
+    icon: "i-simple-icons-googledocs",
+    ...linkSettings
+},
+{
+    label: "ATS",
+    to: "/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume.pdf",
     icon: "i-simple-icons-googledocs",
     ...linkSettings
 }
