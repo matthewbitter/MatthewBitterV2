@@ -44,7 +44,8 @@ export default defineNuxtConfig({
         // Public keys (Server and Client-side)
         public: {
             RecaptchaSiteKey: "",
-            StripePublishableKey: ""
+            StripePublishableKey: "",
+            BuildTime: new Date().getTime().toString()
         }
     },
 

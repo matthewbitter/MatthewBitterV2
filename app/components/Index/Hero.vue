@@ -13,7 +13,7 @@
                 <UButton label="GitHub" to="https://github.com/matthewbitter" variant="ghost" size="xl" icon="i-simple-icons-github" target="_blank" rel="noopener noreferrer" class="mx-auto" />
                 <UButton label="LinkedIn" to="https://www.linkedin.com/in/matthew-bitter" variant="ghost" size="xl" icon="i-simple-icons-linkedin" target="_blank" rel="noopener noreferrer" class="mx-auto" />
                 <UDropdownMenu arrow :items="ResumeLinks" size="xl">
-                    <UButton label="Resume" to="/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf" variant="ghost" size="xl" icon="i-simple-icons-googledocs" target="_blank" rel="noopener noreferrer" class="mx-auto" />
+                    <UButton label="Resume" :to="`/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf${BuildTime}`" variant="ghost" size="xl" icon="i-simple-icons-googledocs" target="_blank" rel="noopener noreferrer" class="mx-auto" />
                 </UDropdownMenu>
             </div>
         </template>
@@ -35,6 +35,8 @@ import type { DropdownMenuItem } from "@nuxt/ui";
 // Properties
 //---------------------------------------------------------------------------
 
+const BuildTime = useRuntimeConfig().public.BuildTime;
+
 const linkSettings: DropdownMenuItem = {
     target: "_blank",
     rel: "noopener noreferrer",
@@ -43,13 +45,13 @@ const linkSettings: DropdownMenuItem = {
 
 const ResumeLinks = ref<DropdownMenuItem[]>([{
     label: "Portfolio",
-    to: "/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf",
+    to: `/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume_Portfolio.pdf?v=${BuildTime}`,
     icon: "i-simple-icons-googledocs",
     ...linkSettings
 },
 {
     label: "ATS",
-    to: "/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume.pdf",
+    to: `/Matthew_Bitter_Senior_Full_Stack_Engineer_Resume.pdf?v=${BuildTime}`,
     icon: "i-simple-icons-googledocs",
     ...linkSettings
 }
