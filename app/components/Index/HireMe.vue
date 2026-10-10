@@ -29,7 +29,7 @@
 <script setup lang="ts">
 
 const WhatIAm = `
-With over 20 years of experience delivering production-grade enterprise software, I build high-performance web applications
+With over 15 years of experience delivering production-grade enterprise software, I build high-performance web applications
 that scale seamlessly. I combine deep engineering experience with modern, reactive tech stacks to help businesses launch
 products faster and optimize their current infrastructure.
 
@@ -37,7 +37,7 @@ My specialized sweet spot is the modern web stack: Vue, Nuxt, TypeScript, and Fi
 `;
 
 const WhatIBring = `
-- **Architecture First:** 20+ years of knowing how code decisions impact scaling, avoiding technical debt, and building robust, maintainable systems.
+- **Architecture First:** 15+ years of knowing how code decisions impact scaling, avoiding technical debt, and building robust, maintainable systems.
 - **Frontend Performance:** Elite proficiency in Vue and Nuxt (SSR/SSG), state management (Pinia), and crafting pixel-perfect, highly responsive interfaces.
 - **Type-Safe Full-Stack:** End-to-end TypeScript integration ensuring minimal runtime bugs, cleaner refactoring, and faster deployment cycles.
 - **Serverless Backend Speed:** Expert-level implementation of the Firebase ecosystem (Firestore, Cloud Functions, Authentication, Hosting, and Realtime Database) for swift, cost-effective infrastructure.
